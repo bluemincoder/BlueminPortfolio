@@ -4,7 +4,7 @@ export const siteConfig = {
     name: "bluemin",
     url: "https://blueminportfolio.vercel.app/",
     description: "Portfolio of Minal Satankar",
-    // ogImage: "https://abhishekg.com.np/og.jpg",
+    ogImage: "https://blueminportfolio.vercel.app/og.jpg",
     links: {
         shadcn: "https://ui.shadcn.com/",
         telegram: "https://t.me/bluemincoder",
