@@ -21,7 +21,7 @@ const IntroductionPage = async () => {
                     A coder by day, problem-solver by night!
                 </PageHeaderHeading>
                 <PageHeaderDescription>
-                    I am a aspiring Software Engineer specializing in
+                    I am an aspiring Software Engineer specializing in
                     full-stack application development. I enjoy crafting
                     responsive web solutions using modern technologies like
                     Next.js, React, and Tailwind CSS. Currently, I am expanding

@@ -61,28 +61,13 @@ internships.forEach((exp) => {
 });
 `,
 
-    projects: `const projects = [
-  {
-    name: "BlueminCode",
-    stack: ["Next.js", "Convex", "Clerk", "Monaco Editor", "Razorpay"],
-    feature: "Multilanguage coding platform with theme customization & premium access"
-  },
-  {
-    name: "CodeScreen",
-    stack: ["Next.js", "Stream", "Clerk", "Monaco", "Shadcn"],
-    feature: "Live technical interview platform with screen sharing & code execution"
-  },
-  {
-    name: "NicheNest",
-    stack: ["React", "Node.js", "MongoDB", "JWT", "Nodemailer"],
-    feature: "Job management portal with alerts & role-based access control"
-  }
-];
+    projects: `const projectField = {
+  idea: "Overnight hackathon brilliance",
+  execution: "Debugging marathons",
+  outcome: "Works on my machine... most days!",
+};
 
-projects.forEach((p) => {
-  console.log(\`🚀 \${p.name} built with \${p.stack.join(", ")}\`);
-  console.log("🔧 Feature highlight:", p.feature);
-});
+console.log("Project Field:", projectField);
 `,
 
     educationJourney: `const education = {
