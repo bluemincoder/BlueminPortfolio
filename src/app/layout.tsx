@@ -10,8 +10,8 @@ import { SiteHeader } from "@/components/site-header";
 import { SideNav } from "@/components/side-nav";
 import { SiteFooter } from "@/components/site-footer";
 import { docsConfig } from "@/config/docs";
-import { setViewsServerAction } from "./actions/getAndSetViewsServerAction";
-import { getLoveCountServerAction } from "./actions/getAndSetLoveCountServerAction";
+import { setViewsServerAction } from "@/actions/getAndSetViewsServerAction";
+import { getLoveCountServerAction } from "@/actions/getAndSetLoveCountServerAction";
 
 export const metadata: Metadata = {
     title: siteConfig.name,
