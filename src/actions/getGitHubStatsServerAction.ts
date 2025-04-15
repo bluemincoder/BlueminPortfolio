@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 export async function getGitHubStatsServerAction() {
     try {
         const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 7000); // 7s timeout
+        const timeout = setTimeout(() => controller.abort(), 1000000); // 7s timeout
 
         const response = await fetch(
             `https://api.github.com/users/${siteConfig.links.githubUsername}`,
