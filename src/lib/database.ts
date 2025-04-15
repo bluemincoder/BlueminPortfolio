@@ -1,30 +1,38 @@
 import mongoose from "mongoose";
 
 const MONGODB_URI = process.env.MONGODB_URI!;
+const DB_NAME = "portfolio";
 
-const connectToDatabase = async () => {
-  const connectionState = mongoose.connection.readyState;
+if (!MONGODB_URI) {
+    throw new Error("⚠️ MONGODB_URI is not defined in environment variables.");
+}
 
-  if (connectionState === 1) {
-    console.log("Database connection has already been established.");
-    return;
-  }
+let cached = (global as any).mongoose || { conn: null, promise: null };
 
-  if (connectionState === 2) {
-    console.log("Establishing database connection...");
-    return;
-  }
+export const connectToDatabase = async () => {
+    if (cached.conn) {
+        return cached.conn;
+    }
 
-  try {
-    mongoose.connect(MONGODB_URI!, {
-      dbName: "portfolio",
-      bufferCommands: true,
-    });
-    console.log("Database connection established successfully.");
-  } catch(err: any) {
-    console.log("Error: ", "Connection to database failed");
-    throw new Error("Error: ", err);
-  }
+    if (!cached.promise) {
+        cached.promise = mongoose
+            .connect(MONGODB_URI, {
+                dbName: DB_NAME,
+                bufferCommands: false,
+            })
+            .then((mongooseInstance) => {
+                console.log("Database connected.");
+                return mongooseInstance;
+            })
+            .catch((error) => {
+                console.error("Failed to connect to database:", error);
+                throw error;
+            });
+    }
+
+    cached.conn = await cached.promise;
+    (global as any).mongoose = cached;
+    return cached.conn;
 };
 
 export default connectToDatabase;

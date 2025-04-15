@@ -35,10 +35,11 @@ const StatCard = ({
 );
 
 const Stats = async () => {
-  const views = await getViewsServerAction();
-  const loveCount = await getLoveCountServerAction();
-  const githubStats = await getGitHubStatsServerAction();
-
+  const [views, loveCount, githubStats] = await Promise.all([
+      getViewsServerAction(),
+      getLoveCountServerAction(),
+      getGitHubStatsServerAction(),
+  ]);
   const githubStatCards = [
     {
       title: "Hireable",
