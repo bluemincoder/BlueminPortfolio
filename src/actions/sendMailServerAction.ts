@@ -28,7 +28,7 @@ async function sendEmail(fullname: string, email: string, message: string) {
     return {
       success: "Message sent successfully, I'll get back to you soon. 🤖",
     };
-  } catch (error: any) {
+  } catch(error: any) {
     return {
       error:
         "There seems a problem with the email service, please try again later. 🤖",
@@ -79,7 +79,7 @@ export async function sendMessageServerAction(
     return {
       error: "Something went wrong, please try again later. 🤖",
     };
-  } catch (error: any) {
+  } catch(error: any) {
     return {
       error: "Something went wrong, please try again later. 🤖",
     };

@@ -99,7 +99,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
                 if (localStorage.theme === 'dark' || ((!('theme' in localStorage) || localStorage.theme === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                   document.querySelector('meta[name="theme-color"]').setAttribute('content', '${META_THEME_COLORS.dark}')
                 }
-              } catch (_) {}
+              } catch(error) (_) {}
             `,
                         }}
                     />

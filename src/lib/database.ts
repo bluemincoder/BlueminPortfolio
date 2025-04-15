@@ -21,7 +21,7 @@ const connectToDatabase = async () => {
       bufferCommands: true,
     });
     console.log("Database connection established successfully.");
-  } catch (err: any) {
+  } catch(err: any) {
     console.log("Error: ", "Connection to database failed");
     throw new Error("Error: ", err);
   }
