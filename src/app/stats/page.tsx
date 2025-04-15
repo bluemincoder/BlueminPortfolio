@@ -36,11 +36,10 @@ const StatCard = ({
 
 const Stats = async () => {
   // Try commenting out the actions to test which one causes the timeout
-  // const views = await getViewsServerAction();
-  // const loveCount = await getLoveCountServerAction();
+  const views = await getViewsServerAction();
+  const loveCount = await getLoveCountServerAction();
   const githubStats = await getGitHubStatsServerAction(); // Only keep GitHub for now
-  const views = 0;
-  const loveCount = 0;
+
 
   const githubStatCards = [
     {
@@ -107,7 +106,7 @@ const Stats = async () => {
                   </div>
 
                   <div className="relative z-10 flex flex-col items-center justify-center flex-1 py-6">
-                      {/* {views.success === true ? (
+                      {views.success === true ? (
                           <p className="text-5xl font-bold text-primary">
                               {views.message}
                           </p>
@@ -115,16 +114,14 @@ const Stats = async () => {
                           <p className="text-xl font-bold text-destructive">
                               Failed to fetch views
                           </p>
-                      )} */}
-                      <p className="text-5xl font-bold text-primary">0</p>
-                      {/* {views.success && (
+                      )}
+                      {/* <p className="text-5xl font-bold text-primary">0</p> */}
+                      {views.success && (
                           <p className="text-sm text-muted-foreground text-center mt-4 max-w-[80%]">
                               Unique page visits since April 2025
                           </p>
-                      )} */}
-                      <p className="text-sm text-muted-foreground text-center mt-4 max-w-[80%]">
-                          Unique page visits since April 2025
-                      </p>
+                      )}
+                     
                   </div>
               </div>
 
@@ -153,7 +150,7 @@ const Stats = async () => {
                   </div>
 
                   <div className="relative z-10 flex flex-col items-center justify-center flex-1 py-4">
-                      {/* {loveCount.success === true ? (
+                      {loveCount.success === true ? (
                           <>
                               <p
                                   className="py-6 text-5xl font-bold text-rose-500"
@@ -167,14 +164,8 @@ const Stats = async () => {
                           <p className="text-xl font-bold text-destructive">
                               Failed to fetch appreciation count
                           </p>
-                      )} */}
-                      <p
-                          className="py-6 text-5xl f ont-bold text-rose-500"
-                          id="love-count"
-                      >
-                          0
-                      </p>
-                      <LoveButtonComponent />
+                      )}
+                      
                   </div>
               </div>
           </div>
