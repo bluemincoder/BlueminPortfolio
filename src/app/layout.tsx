@@ -20,7 +20,6 @@ export const metadata: Metadata = {
     keywords: [
         "Minal Satankar",
         "Minal S",
-        "abhishekg.com.np",
         "Minal Satankar Portfolio",
         "Minal Satankar Projects",
         "Minal Satankar Skills",

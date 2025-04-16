@@ -10,7 +10,7 @@ import { code } from "@/config/codeContent";
 const AboutMePage = () => {
     return (
         <>
-            <PageHeader>
+            <PageHeader className="mb-10">
                 <PageHeaderHeading>About Minal</PageHeaderHeading>
                 <PageHeaderHeading className="mt-2 text-muted-foreground">
                     Curious developer. Community builder. Competitive coder.
@@ -33,18 +33,92 @@ const AboutMePage = () => {
                 </PageHeaderDescription>
 
                 <PageHeaderDescription>
-                    I'm also an avid competitive programmer, with 1200+ problems
-                    solved across Codeforces, LeetCode, and CodeChef. Highlights
-                    include being a Codeforces Specialist, LeetCode Knight (top
-                    0.01%), and 3-Star on CodeChef—with ranks in the global top
-                    percentile.
-                </PageHeaderDescription>
-
-                <PageHeaderDescription>
                     Whether it’s building, leading, or solving—I'm driven by a
                     genuine love for tech and a desire to create impact.
                 </PageHeaderDescription>
             </PageHeader>
+            <PageHeaderHeading className="mt-2 text-muted-foreground mb-10">
+                Sports Programming
+            </PageHeaderHeading>
+            <ol className="relative mb-10 border-s border-gray-200 dark:border-gray-700">
+                <li className="mb-10 ms-6">
+                    <span className="absolute flex items-center justify-center w-6 h-6 bg-cyan-200 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-cyan-500" />
+                    <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white underline">
+                        <a
+                            href="https://codeforces.com/profile/bluemincoder"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            Codeforces ·{" "}
+                            <span className="text-cyan-600 dark:text-cyan-400">
+                                Specialist
+                            </span>{" "}
+                            (Highest Rating: 1412)
+                        </a>
+                    </h3>
+                    <time className="block mb-2 text-sm font-normal text-gray-400 dark:text-gray-500">
+                        Handle: bluemincoder · 900+ Problems Solved
+                    </time>
+                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                        Ranked 1418 out of 20,035
+                        participants (top 7%) in Codeforces Round 984 (Div. 3).
+                        Strengthened my ability to think critically under
+                        pressure and solve diverse algorithmic challenges.
+                    </p>
+                </li>
+
+                <li className="mb-10 ms-6">
+                    <span className="absolute flex items-center justify-center w-6 h-6 bg-amber-200 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-amber-700" />
+                    <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white underline">
+                        <a
+                            href="https://leetcode.com/bluemincoder/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            LeetCode ·{" "}
+                            <span className="text-amber-600 dark:text-amber-400">
+                                Knight
+                            </span>{" "}
+                            (Highest Rating: 1946)
+                        </a>
+                    </h3>
+                    <time className="block mb-2 text-sm font-normal text-gray-400 dark:text-gray-500">
+                        Handle: bluemincoder · 300+ Problems Solved
+                    </time>
+                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                        Achieved a peak contest rank of 289 out of 30,923
+                        participants (top 0.01%) in Weekly Contest 442. LeetCode
+                        helped sharpen my problem-solving skills with real-world
+                        style questions and timed contests.
+                    </p>
+                </li>
+
+                <li className="mb-10 ms-6">
+                    <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-200 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-800" />
+                    <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white underline">
+                        <a
+                            href="https://www.codechef.com/users/bluemin"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            CodeChef ·{" "}
+                            <span className="text-blue-600 dark:text-blue-400">
+                                3-Star
+                            </span>{" "}
+                            (Highest Rating: 1744)
+                        </a>
+                    </h3>
+                    <time className="block mb-2 text-sm font-normal text-gray-400 dark:text-gray-500">
+                        Handle: bluemin · 100+ Problems Solved
+                    </time>
+                    <p className="text-base font-normal text-gray-500 dark:text-gray-400">
+                        Secured a rank of 58 out of 2,753 participants (top
+                        0.02%) in CodeChef Starters 104 Div3. Gained strong
+                        consistency and accuracy under timed competitive
+                        programming environments.
+                    </p>
+                </li>
+            </ol>
 
             <CodeSnippet title="aboutMe.ts" code={code.aboutMe} />
 

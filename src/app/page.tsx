@@ -21,13 +21,16 @@ const IntroductionPage = async () => {
                     A coder by day, problem-solver by night!
                 </PageHeaderHeading>
                 <PageHeaderDescription>
-                    I am an aspiring Software Engineer specializing in
-                    full-stack application development. I enjoy crafting
-                    responsive web solutions using modern technologies like
-                    Next.js, React, and Tailwind CSS. Currently, I am expanding
-                    my skills into devops with Docker and
-                    Redis, aiming to deliver comprehensive, user-centric software
-                    solutions.
+                    I’m an aspiring Software Engineer with a strong passion for
+                    full-stack web development and competitive programming. I
+                    specialize in building scalable applications using
+                    technologies like Next.js, React, Node.js, and MongoDB. My
+                    experience in C++, TypeScript, and Python allows me to solve
+                    complex problems efficiently. I am also expanding my skills
+                    into DevOps with tools like Docker and Redis to deliver
+                    robust, user-focused software solutions. Currently, I am
+                    looking for opportunities where I can contribute my skills
+                    and grow further.
                 </PageHeaderDescription>
                 <PageActions>
                     <Button asChild size="sm" className="rounded-md">
@@ -42,9 +45,9 @@ const IntroductionPage = async () => {
                         variant="ghost"
                         className="rounded-md"
                     >
-                        <Link href={siteConfig.links.email}>
+                        <Link href="/contact">
                             <Mail className="size-4" />
-                            Send Mail
+                            Contact Me!
                         </Link>
                     </Button>
                 </PageActions>

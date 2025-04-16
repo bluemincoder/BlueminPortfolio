@@ -27,7 +27,7 @@ const ExperiencePage = () => {
 
             <ol className="relative mb-10 border-s border-gray-200 dark:border-gray-700">
                 <li className="mb-10 ms-6">
-                    <span className="absolute flex items-center justify-center w-6 h-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900" />
+                    <span className="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-purple-900" />
                     <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                         Software Developer Intern · Jorte Career Counsel
                     </h3>
@@ -44,7 +44,7 @@ const ExperiencePage = () => {
                 </li>
 
                 <li className="mb-10 ms-6">
-                    <span className="absolute flex items-center justify-center w-6 h-6 bg-green-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-green-900" />
+                    <span className="absolute flex items-center justify-center w-6 h-6 bg-purple-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-purple-900" />
                     <h3 className="mb-1 text-lg font-semibold text-gray-900 dark:text-white">
                         CP/DSA Lead · GFG IIIT-BH Student’s Chapter
                     </h3>

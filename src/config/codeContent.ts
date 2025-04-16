@@ -29,7 +29,6 @@ console.log(getSkills());
     contact: `const contactDetails = {
   name: "Minal Satankar",
   email: "minaalwork@gmail.com",
-  mobile: "+91-7879378715",
   location: "Bhopal, Madhya Pradesh",
   linkedIn: "linkedin.com/in/bluemincoder",
   github: "github.com/bluemincoder",
