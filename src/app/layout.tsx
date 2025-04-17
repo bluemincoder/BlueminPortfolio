@@ -12,7 +12,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { docsConfig } from "@/config/docs";
 import { setViewsServerAction } from "@/actions/getAndSetViewsServerAction";
 import { getLoveCountServerAction } from "@/actions/getAndSetLoveCountServerAction";
-import AnimatedCursor from "react-animated-cursor";
+import CustomCursor from "@/components/CustomCursor";
 
 
 
@@ -114,19 +114,6 @@ export default async function RootLayout({ children }: RootLayoutProps) {
                         fontMono.variable
                     )}
                 >
-                    <AnimatedCursor
-                        innerSize={8}
-                        outerSize={20}
-                        innerScale={1}
-                        outerScale={2}
-                        outerAlpha={0}
-                        innerStyle={{
-                            backgroundColor: "var(--cursor-color)",
-                        }}
-                        outerStyle={{
-                            border: "3px solid var(--cursor-color)",
-                        }}
-                    />
                     <ThemeProvider
                         attribute="class"
                         defaultTheme="system"
@@ -134,6 +121,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
                         disableTransitionOnChange
                         enableColorScheme
                     >
+                        <CustomCursor />
+
                         <div vaul-drawer-wrapper="">
                             <div className="relative flex flex-col min-h-svh bg-background">
                                 <div
