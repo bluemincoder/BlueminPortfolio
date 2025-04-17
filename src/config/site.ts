@@ -1,7 +1,7 @@
 import { title } from "process";
 
 export const siteConfig = {
-    name: "bluemin",
+    name: "Bluemin Portfolio",
     url: "https://blueminportfolio.vercel.app/",
     description: "Portfolio of Minal Satankar",
     ogImage: "https://blueminportfolio.vercel.app/og.jpg",
