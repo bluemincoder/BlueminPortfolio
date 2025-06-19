@@ -41,7 +41,7 @@ const EducationPage = () => {
                         </span>
                     </h3>
                     <time className="block mb-2 text-sm font-normal text-gray-400 dark:text-gray-500">
-                        2022 – 2026 · CGPA: 7.05/10
+                        2022 – 2026 · CGPA: 7.16/10
                     </time>
                     <p className="text-base font-normal text-gray-500 dark:text-gray-400">
                         Pursuing a B.Tech at IIIT Bhagalpur with a focus on

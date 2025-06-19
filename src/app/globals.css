@@ -59,7 +59,7 @@
     --accent: oklch(0.967 0.001 286.375);
     --accent-foreground: oklch(0.21 0.006 285.885);
     --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.92 0.004 286.32);
+    --border: oklch(0.72 0.004 286.32);
     --input: oklch(0.92 0.004 286.32);
     --ring: oklch(0.606 0.25 292.717);
     --chart-1: oklch(0.646 0.222 41.116);
@@ -78,7 +78,7 @@
 }
 
 .dark {
-    --background: oklch(0.18 0.005 285.823);
+    --background: oklch(0 0);
     --foreground: oklch(0.985 0 0);
     --card: oklch(0.21 0.006 285.885);
     --card-foreground: oklch(0.985 0 0);
@@ -116,9 +116,11 @@
         @apply border-border outline-ring/50;
         cursor: none !important;
     }
+
     html {
         @apply scroll-smooth;
     }
+
     body {
         @apply bg-background text-foreground overscroll-none;
         font-synthesis-weight: none;
@@ -135,13 +137,16 @@
     ::-webkit-scrollbar {
         width: 5px;
     }
+
     ::-webkit-scrollbar-track {
         background: transparent;
     }
+
     ::-webkit-scrollbar-thumb {
         background: hsl(var(--border));
         border-radius: 5px;
     }
+
     * {
         scrollbar-width: thin;
         scrollbar-color: hsl(var(--border)) transparent;
@@ -173,10 +178,13 @@
     .no-scrollbar::-webkit-scrollbar {
         display: none;
     }
+
     /* Hide scrollbar for IE, Edge and Firefox */
     .no-scrollbar {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+        scrollbar-width: none;
+        /* Firefox */
     }
 
     .border-grid {

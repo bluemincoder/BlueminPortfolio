@@ -79,11 +79,11 @@ const AboutMePage = () => {
                             <span className="text-amber-600 dark:text-amber-400">
                                 Knight
                             </span>{" "}
-                            (Highest Rating: 1946)
+                            (Highest Rating: 2028)
                         </a>
                     </h3>
                     <time className="block mb-2 text-sm font-normal text-gray-400 dark:text-gray-500">
-                        Handle: bluemincoder · 300+ Problems Solved
+                        Handle: bluemincoder · 400+ Problems Solved
                     </time>
                     <p className="text-base font-normal text-gray-500 dark:text-gray-400">
                         Achieved a peak contest rank of 289 out of 30,923
@@ -105,7 +105,7 @@ const AboutMePage = () => {
                             <span className="text-blue-600 dark:text-blue-400">
                                 3-Star
                             </span>{" "}
-                            (Highest Rating: 1744)
+                            (Highest Rating: 1762)
                         </a>
                     </h3>
                     <time className="block mb-2 text-sm font-normal text-gray-400 dark:text-gray-500">
