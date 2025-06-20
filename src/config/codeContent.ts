@@ -13,8 +13,8 @@ console.log(\`My superpower is: \${superpower()}\`);
 
     skillsTools: `const mySkills = [
   "HTML", "CSS", "JavaScript", "TypeScript", "React.js", "Next.js", "Tailwind CSS",
-  "shadcn/ui", "Node.js", "Express.js", "MongoDB", "Git", "GitHub", "Vercel", 
-  "Postman", "Linux", "Windows", "pnpm", "npm", "Socket.io", "REST APIs"
+  "shadcn/ui", "Node.js", "Express.js", "MongoDB", "Git", "GitHub", "Vercel", "Framer Motion",
+  "Aceternity UI", "Postman", "Linux", "Windows", "pnpm", "npm", "Socket.io", "REST APIs", "Redis"
 ];
 
 const getSkills = () => {
@@ -41,7 +41,7 @@ function reachOut() {
 reachOut();
 `,
 
-experience: `const internships = [
+    experience: `const internships = [
   {
     role: "Full Stack Dev Intern",
     company: "Medzillo",
@@ -70,6 +70,15 @@ internships.forEach((exp) => {
 });
 `,
 
+    leadership: `const leadershipRoles = [
+  "CP/DSA Lead at GFG IIIT-BH Chapter",
+  "Project Manager at OPCODE Spring Fest", 
+  "Club Lead at PyC Coding Club IIIT-BH"
+];
+
+console.log("👑 Leadership Roles:");
+leadershipRoles.forEach(role => console.log("🔹", role));
+`,
 
     projects: `const projectField = {
   idea: "Overnight hackathon brilliance",

@@ -39,6 +39,11 @@ export const docsConfig = {
           items: [],
         },
         {
+          title: "Leadership",
+          href: "/leadership",
+          items: [],
+        },
+        {
           title: "Education",
           href: "/education",
           items: [],

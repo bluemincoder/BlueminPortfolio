@@ -1,5 +1,6 @@
-export const dynamic = "force-dynamic";
+"use client";
 
+import { Suspense, useEffect, useState } from "react";
 import {
   PageHeader,
   PageHeaderDescription,
@@ -10,6 +11,7 @@ import { getLoveCountServerAction } from "@/actions/getAndSetLoveCountServerActi
 import LoveButtonComponent from "./LoveButtonComponent";
 import { getGitHubStatsServerAction } from "@/actions/getGitHubStatsServerAction";
 import GitHubGraphs from "./GitHubGraphs";
+import StatsSkeleton from "./StatsSkeleton";
 
 const StatCard = ({
     title,
@@ -34,38 +36,63 @@ const StatCard = ({
     </div>
 );
 
-const Stats = async () => {
-  // Try commenting out the actions to test which one causes the timeout
-  const views = await getViewsServerAction();
-  const loveCount = await getLoveCountServerAction();
-  const githubStats = await getGitHubStatsServerAction(); // Only keep GitHub for now
+const StatsContent = () => {
+  const [views, setViews] = useState<any>(null);
+  const [loveCount, setLoveCount] = useState<any>(null);
+  const [githubStats, setGithubStats] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [viewsData, loveCountData, githubStatsData] = await Promise.all([
+          getViewsServerAction(),
+          getLoveCountServerAction(),
+          getGitHubStatsServerAction()
+        ]);
+        
+        setViews(viewsData);
+        setLoveCount(loveCountData);
+        setGithubStats(githubStatsData);
+      } catch (error) {
+        console.error('Error fetching stats:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) {
+    return <StatsSkeleton />;
+  }
 
   const githubStatCards = [
     {
       title: "Hireable",
-      value: githubStats.hireable ? "Yes" : "No",
-      className: githubStats.hireable ? "bg-green-500/20" : "",
+      value: githubStats?.hireable ? "Yes" : "No",
+      className: githubStats?.hireable ? "bg-green-500/20" : "",
     },
     {
       title: "Total Public Repositories",
-      value: githubStats.public_repos || 0,
+      value: githubStats?.public_repos || 0,
     },
     {
       title: "Followers",
-      value: githubStats.followers || 0,
+      value: githubStats?.followers || 0,
     },
     {
       title: "Following",
-      value: githubStats.following || 0,
+      value: githubStats?.following || 0,
     },
     {
       title: "Current Company",
-      value: githubStats.company || "N/A",
+      value: githubStats?.company || "N/A",
     },
     {
       title: "Location",
-      value: githubStats.location || "N/A",
+      value: githubStats?.location || "N/A",
     },
   ];
 
@@ -106,7 +133,7 @@ const Stats = async () => {
                   </div>
 
                   <div className="relative z-10 flex flex-col items-center justify-center flex-1 py-6">
-                      {views.success === true ? (
+                      {views?.success === true ? (
                           <p className="text-5xl font-bold text-primary">
                               {views.message}
                           </p>
@@ -115,8 +142,7 @@ const Stats = async () => {
                               Failed to fetch views
                           </p>
                       )}
-                      {/* <p className="text-5xl font-bold text-primary">0</p> */}
-                      {views.success && (
+                      {views?.success && (
                           <p className="text-sm text-muted-foreground text-center mt-4 max-w-[80%]">
                               Unique page visits since April 2025
                           </p>
@@ -150,7 +176,7 @@ const Stats = async () => {
                   </div>
 
                   <div className="relative z-10 flex flex-col items-center justify-center flex-1 py-4">
-                      {loveCount.success === true ? (
+                      {loveCount?.success === true ? (
                           <>
                               <p
                                   className="py-6 text-5xl font-bold text-rose-500"
@@ -196,6 +222,14 @@ const Stats = async () => {
               </div>
           </div>
       </>
+  );
+};
+
+const Stats = () => {
+  return (
+    <Suspense fallback={<StatsSkeleton />}>
+      <StatsContent />
+    </Suspense>
   );
 };
 
