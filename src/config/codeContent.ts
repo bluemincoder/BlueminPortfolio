@@ -41,15 +41,25 @@ function reachOut() {
 reachOut();
 `,
 
-    experience: `const internships = [
+experience: `const internships = [
   {
-    role: "Software Developer Intern",
-    company: "Jorte Career Counsel",
-    duration: "May 2024 – Aug 2024",
+    role: "Full Stack Dev Intern",
+    company: "Medzillo",
+    duration: "May 2025 – Present",
     highlights: [
-      "Built a scalable NEET test platform backend",
-      "Integrated ImageKit for optimized media delivery",
-      "Streamlined payments with Razorpay & automated test flows"
+      "Built scalable booking system (Next.js, Node, MongoDB)",
+      "Setup Redis + Socket.IO for 100+ concurrent requests",
+      "Optimized performance via code splitting, lazy loading"
+    ]
+  },
+  {
+    role: "Frontend Dev Intern",
+    company: "LawQuest",
+    duration: "Feb 2025 – Apr 2025",
+    highlights: [
+      "Made course & blog pages (Next.js)",
+      "Integrated forms with Zod, Nodemailer",
+      "Built reusable UI with Aceternity & Framer Motion"
     ]
   }
 ];
@@ -59,6 +69,7 @@ internships.forEach((exp) => {
   exp.highlights.forEach(item => console.log("🔹", item));
 });
 `,
+
 
     projects: `const projectField = {
   idea: "Overnight hackathon brilliance",
@@ -73,7 +84,7 @@ console.log("Project Field:", projectField);
   institute: "IIIT Bhagalpur",
   degree: "B.Tech in Electronics and Communication Engineering",
   duration: "2022 – 2026",
-  cgpa: 7.05,
+  cgpa: 7.16,
 };
 
 console.log("🎓 Studying at", education.institute);
