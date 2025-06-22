@@ -8,12 +8,12 @@ import Link from "next/link";
 export async function SiteFooter() {
     const currentYear = new Date().getFullYear();
     return (
-        <footer className="py-2 border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <footer className="border-t border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-dashed">
             <div className="container-wrapper">
                 <div className="container flex flex-col items-center justify-center py-4 space-y-2">
                     <div className="max-w-3xl text-xs leading-relaxed text-center sm:text-sm text-balance text-muted-foreground">
                         <span className="block sm:inline">
-                            © 2018 - {currentYear}
+                            © 2022 - {currentYear}
                         </span>
                         <span className="hidden sm:inline"> · </span>
                         <span className="block sm:inline">

@@ -37,7 +37,7 @@ const CustomCursor = () => {
             width="18"
             height="22"
             viewBox="0 0 21 25"
-            className="hidden md:block fixed top-0 left-0 opacity-0 z-[50] pointer-events-none" // -translate-x-1/2 -translate-y-1/2
+            className="hidden md:block fixed top-0 left-0 opacity-0 z-55 pointer-events-none" // -translate-x-1/2 -translate-y-1/2
             fill="none"
             id="cursor"
             strokeWidth="2"
